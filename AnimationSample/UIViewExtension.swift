@@ -64,6 +64,19 @@ extension UIView{
         
     }
     
+    //一周するように設定 optonの設定は必要な時に入れるようにする。
+    func rotationAnimation(){
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
+        animation.fromValue = Double.pi
+        animation.toValue = Double.pi / 2
+        animation.speed = 0.1
+        animation.repeatCount = MAXFLOAT
+        animation.autoreverses = false
+        
+        self.layer.add(animation, forKey: nil)
+    }
+    
+    
 }
 
 extension UIView:CAAnimationDelegate{
