@@ -15,11 +15,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sampleView.boundAnimation(Speed:0.1)
-        sampleView.TransmissionAnimation()
-        sampleView.AddTopAnimation(AddY:30)
-        sampleView.rotationAnimation()
-        sampleView.backgroundColorAnimation()
+//        sampleView.boundAnimation(Speed:0.1)
+//        sampleView.TransmissionAnimation()
+//        sampleView.AddTopAnimation(AddY:30)
+//        sampleView.rotationAnimation()
+//        sampleView.backgroundColorAnimation()
+        
+        
+//        UIView.animate(withDuration: 1.0, delay: 0.0, options: [.curveEaseIn, .autoreverse], animations: {
+//            self.sampleView.center.y += 100.0
+//        }) { _ in
+//            self.sampleView.center.y -= 100.0
+//        }
+        
+        
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: [.autoreverse, .repeat], animations: {
+            self.sampleView.center.y += 100.0
+        }, completion: nil)
         
     }
 
