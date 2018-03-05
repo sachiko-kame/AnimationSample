@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sampleView.boundAnimation(Speed:0.1)
+//        sampleView.boundAnimation(Speed:0.1)
+        sampleView.TransmissionAnimation()
         
     }
 

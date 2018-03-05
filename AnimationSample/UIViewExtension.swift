@@ -35,6 +35,18 @@ extension UIView{
     
         self.layer.add(animation, forKey: nil)
     }
+    
+    //透過 optonの設定は必要な時に入れるようにする。
+    func TransmissionAnimation(){
+        let animation = CABasicAnimation(keyPath: "opacity")
+        animation.fromValue = 0.1
+        animation.toValue = 1
+        animation.speed = 0.1
+        animation.repeatCount = MAXFLOAT
+        animation.autoreverses = true
+        
+        self.layer.add(animation, forKey: nil)
+    }
 }
 
 extension UIView:CAAnimationDelegate{
