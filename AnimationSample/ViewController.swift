@@ -16,7 +16,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
 //        sampleView.boundAnimation(Speed:0.1)
-        sampleView.TransmissionAnimation()
+//        sampleView.TransmissionAnimation()
+        sampleView.AddTopAnimation(AddY:30)
         
     }
 

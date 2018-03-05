@@ -20,7 +20,7 @@ extension UIView{
         
         if(Repeat == true){
             animation.repeatCount = MAXFLOAT
-            animation.autoreverses = true
+            animation.autoreverses = true //逆移動のスムーズ
             animation.duration = CFTimeInterval(ToRepeatTime) //アニメーションするまでの時間
         }
         
@@ -47,6 +47,23 @@ extension UIView{
         
         self.layer.add(animation, forKey: nil)
     }
+    
+    //移動sample　今回上に追加のみ optonの設定は必要な時に入れるようにする。
+    func AddTopAnimation(AddY:CGFloat){
+        let nowX = self.frame.origin.x
+        let nowY = self.frame.origin.y
+        
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.toValue = [nowX, nowY]
+        animation.fromValue = [nowX, nowY + AddY]
+        animation.speed = 0.1
+        animation.repeatCount = MAXFLOAT
+        animation.autoreverses = true
+        
+        self.layer.add(animation, forKey: nil)
+        
+    }
+    
 }
 
 extension UIView:CAAnimationDelegate{
