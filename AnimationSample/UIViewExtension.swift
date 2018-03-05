@@ -76,6 +76,18 @@ extension UIView{
         self.layer.add(animation, forKey: nil)
     }
     
+    //バックカラー変更 optonの設定は必要な時に入れるようにする。
+    func backgroundColorAnimation(){
+        let animation = CABasicAnimation(keyPath: "backgroundColor")
+        animation.fromValue = self.backgroundColor?.cgColor
+        animation.toValue = UIColor.blue.cgColor
+        
+        animation.speed = 0.1
+        animation.repeatCount = MAXFLOAT
+        animation.autoreverses = true
+        
+        self.layer.add(animation, forKey: nil)
+    }
     
 }
 

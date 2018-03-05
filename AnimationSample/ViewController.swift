@@ -15,10 +15,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        sampleView.boundAnimation(Speed:0.1)
-//        sampleView.TransmissionAnimation()
-//        sampleView.AddTopAnimation(AddY:30)
+        sampleView.boundAnimation(Speed:0.1)
+        sampleView.TransmissionAnimation()
+        sampleView.AddTopAnimation(AddY:30)
         sampleView.rotationAnimation()
+        sampleView.backgroundColorAnimation()
         
     }
 
