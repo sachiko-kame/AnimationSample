@@ -9,9 +9,9 @@
 import UIKit
 
 extension UIView{
-    //基本
+    //基本 //transform.scale.x　transform.scale.y
     func boundAnimation(Repeat:Bool = false, ToRepeatTime:Float = 1, EndStop:Bool = true, Speed:Float){
-        let animation = CASpringAnimation(keyPath: "transform.scale")
+        let animation = CASpringAnimation(keyPath: .scale)
         animation.delegate = self
         animation.fromValue = 0.5 //現在の大きさの何倍から
         animation.toValue = 3 //現在の大きさの何倍まで
@@ -38,7 +38,7 @@ extension UIView{
     
     //透過 optonの設定は必要な時に入れるようにする。
     func TransmissionAnimation(){
-        let animation = CABasicAnimation(keyPath: "opacity")
+        let animation = CABasicAnimation(keyPath: .opacity)
         animation.fromValue = 0.1
         animation.toValue = 1
         animation.speed = 0.1
@@ -48,12 +48,12 @@ extension UIView{
         self.layer.add(animation, forKey: nil)
     }
     
-    //移動sample　今回上に追加のみ optonの設定は必要な時に入れるようにする。
+    //移動sample　今回上に追加のみ optonの設定は必要な時に入れるようにする。position.x position.y できるはず
     func AddTopAnimation(AddY:CGFloat){
         let nowX = self.frame.origin.x
         let nowY = self.frame.origin.y
         
-        let animation = CABasicAnimation(keyPath: "position")
+        let animation = CABasicAnimation(keyPath: .position)
         animation.toValue = [nowX, nowY]
         animation.fromValue = [nowX, nowY + AddY]
         animation.speed = 0.1
@@ -66,7 +66,7 @@ extension UIView{
     
     //一周するように設定 optonの設定は必要な時に入れるようにする。
     func rotationAnimation(){
-        let animation = CABasicAnimation(keyPath: "transform.rotation")
+        let animation = CABasicAnimation(keyPath: .rotate)
         animation.fromValue = Double.pi
         animation.toValue = Double.pi / 2
         animation.speed = 0.1
@@ -78,7 +78,7 @@ extension UIView{
     
     //バックカラー変更 optonの設定は必要な時に入れるようにする。
     func backgroundColorAnimation(){
-        let animation = CABasicAnimation(keyPath: "backgroundColor")
+        let animation = CABasicAnimation(keyPath: .backgroundColor)
         animation.fromValue = self.backgroundColor?.cgColor
         animation.toValue = UIColor.blue.cgColor
         

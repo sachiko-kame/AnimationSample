@@ -15,6 +15,7 @@
 		84038156204DD3B0007C7CE9 /* AnimationSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84038155204DD3B0007C7CE9 /* AnimationSampleTests.swift */; };
 		84038161204DD3B0007C7CE9 /* AnimationSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84038160204DD3B0007C7CE9 /* AnimationSampleUITests.swift */; };
 		8403816F204DD4E7007C7CE9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403816E204DD4E7007C7CE9 /* UIViewExtension.swift */; };
+		84038171204DECE8007C7CE9 /* CABasicAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84038170204DECE8007C7CE9 /* CABasicAnimationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		84038160204DD3B0007C7CE9 /* AnimationSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationSampleUITests.swift; sourceTree = "<group>"; };
 		84038162204DD3B0007C7CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8403816E204DD4E7007C7CE9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		84038170204DECE8007C7CE9 /* CABasicAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CABasicAnimationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				84038142204DD3B0007C7CE9 /* ViewController.swift */,
 				84038144204DD3B0007C7CE9 /* Main.storyboard */,
 				8403816E204DD4E7007C7CE9 /* UIViewExtension.swift */,
+				84038170204DECE8007C7CE9 /* CABasicAnimationExtension.swift */,
 				84038147204DD3B0007C7CE9 /* Assets.xcassets */,
 				84038149204DD3B0007C7CE9 /* LaunchScreen.storyboard */,
 				8403814C204DD3B0007C7CE9 /* Info.plist */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8403816F204DD4E7007C7CE9 /* UIViewExtension.swift in Sources */,
+				84038171204DECE8007C7CE9 /* CABasicAnimationExtension.swift in Sources */,
 				84038143204DD3B0007C7CE9 /* ViewController.swift in Sources */,
 				84038141204DD3B0007C7CE9 /* AppDelegate.swift in Sources */,
 			);
