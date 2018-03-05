@@ -37,18 +37,26 @@ class ViewController: UIViewController {
 //        }, completion: nil)
         
 // MARK: - パターン3 skView
-        let skView = SKView(frame: self.view.frame)
-        skView.allowsTransparency = true
-        let scene = SKScene(size: self.view.frame.size)
-        scene.backgroundColor = UIColor.clear
-        let path = Bundle.main.path(forResource: "MyParticle", ofType: "sks")
-        let particle = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as! SKEmitterNode
-        particle.name = "MyParticle"
-        particle.position = CGPoint(x:self.view.frame.width / 2, y:self.view.frame.height / 2)
-        scene.addChild(particle)
-        skView.presentScene(scene)
-        self.view.addSubview(skView)
+//        let skView = SKView(frame: self.view.frame)
+//        skView.allowsTransparency = true
+//        let scene = SKScene(size: self.view.frame.size)
+//        scene.backgroundColor = UIColor.clear
+//        let path = Bundle.main.path(forResource: "MyParticle", ofType: "sks")
+//        let particle = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as! SKEmitterNode
+//        particle.name = "MyParticle"
+//        particle.position = CGPoint(x:self.view.frame.width / 2, y:self.view.frame.height / 2)
+//        scene.addChild(particle)
+//        skView.presentScene(scene)
+//        self.view.addSubview(skView)
 // MARK: - パターン4 Timer
+        var timer = Timer()
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.onUpdate(timer:)), userInfo: nil, repeats: true)
+        timer.fire()
+        
+    }
+    
+    @objc func onUpdate(timer : Timer){
+        sampleView.frame.origin.x += 1
     }
 
     override func didReceiveMemoryWarning() {
