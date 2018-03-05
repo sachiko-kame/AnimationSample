@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpriteKit
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+// MARK: - パターン1
 //        sampleView.boundAnimation(Speed:0.1)
 //        sampleView.TransmissionAnimation()
 //        sampleView.AddTopAnimation(AddY:30)
@@ -22,6 +24,7 @@ class ViewController: UIViewController {
 //        sampleView.backgroundColorAnimation()
         
         
+// MARK: - パターン2
 //        UIView.animate(withDuration: 1.0, delay: 0.0, options: [.curveEaseIn, .autoreverse], animations: {
 //            self.sampleView.center.y += 100.0
 //        }) { _ in
@@ -29,10 +32,23 @@ class ViewController: UIViewController {
 //        }
         
         
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: [.autoreverse, .repeat], animations: {
-            self.sampleView.center.y += 100.0
-        }, completion: nil)
+//        UIView.animate(withDuration: 1.0, delay: 0.0, options: [.autoreverse, .repeat], animations: {
+//            self.sampleView.center.y += 100.0
+//        }, completion: nil)
         
+// MARK: - パターン3 skView
+        let skView = SKView(frame: self.view.frame)
+        skView.allowsTransparency = true
+        let scene = SKScene(size: self.view.frame.size)
+        scene.backgroundColor = UIColor.clear
+        let path = Bundle.main.path(forResource: "MyParticle", ofType: "sks")
+        let particle = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as! SKEmitterNode
+        particle.name = "MyParticle"
+        particle.position = CGPoint(x:self.view.frame.width / 2, y:self.view.frame.height / 2)
+        scene.addChild(particle)
+        skView.presentScene(scene)
+        self.view.addSubview(skView)
+// MARK: - パターン4 Timer
     }
 
     override func didReceiveMemoryWarning() {
