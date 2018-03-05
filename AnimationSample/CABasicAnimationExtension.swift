@@ -46,3 +46,10 @@ extension CABasicAnimation {
         self.init(keyPath: keyPath.rawValue)
     }
 }
+
+extension CAKeyframeAnimation{
+    
+    public convenience init(keyPath: MotionAnimationKeyPath) {
+        self.init(keyPath: keyPath.rawValue)
+    }
+}

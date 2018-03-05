@@ -89,6 +89,21 @@ extension UIView{
         self.layer.add(animation, forKey: nil)
     }
     
+    //連続パターン optonの設定は必要な時に入れるようにする。
+    func ContinuousProcessingAnimation(){
+        let animation = CAKeyframeAnimation(keyPath: .position)
+        animation.values = [[0, 60],
+                            [130, 200],
+                            [60, 0],
+                            [25, 100]]
+        animation.keyTimes = [0, 0.25, 0.5, 0.75, 1]
+        animation.speed = 0.1
+        animation.repeatCount = MAXFLOAT
+        animation.autoreverses = true
+        self.layer.add(animation, forKey: nil)
+    }
+    
+
 }
 
 extension UIView:CAAnimationDelegate{

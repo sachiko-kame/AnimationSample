@@ -22,6 +22,7 @@ class ViewController: UIViewController {
 //        sampleView.AddTopAnimation(AddY:30)
 //        sampleView.rotationAnimation()
 //        sampleView.backgroundColorAnimation()
+        sampleView.ContinuousProcessingAnimation()
         
         
 // MARK: - パターン2
@@ -49,15 +50,15 @@ class ViewController: UIViewController {
 //        skView.presentScene(scene)
 //        self.view.addSubview(skView)
 // MARK: - パターン4 Timer
-        var timer = Timer()
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.onUpdate(timer:)), userInfo: nil, repeats: true)
-        timer.fire()
+//        var timer = Timer()
+//        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.onUpdate(timer:)), userInfo: nil, repeats: true)
+//        timer.fire()
         
     }
     
-    @objc func onUpdate(timer : Timer){
-        sampleView.frame.origin.x += 1
-    }
+//    @objc func onUpdate(timer : Timer){
+//        sampleView.frame.origin.x += 1
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
